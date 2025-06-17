@@ -1,0 +1,10 @@
+.button{
+    color: white !important;
+}
+
+.sup-box {
+
+    border-radius: 10px;
+    background-color:  rgb(246, 247, 248) ;
+    box-shadow: 1px 10px 10px rgb(214, 213, 213);
+}

@@ -1,0 +1,10 @@
+.prod {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(246, 247, 248);
+}
+
+.prod:hover{
+    box-shadow: 1px 7px 10px  rgb(222, 221, 221);
+}

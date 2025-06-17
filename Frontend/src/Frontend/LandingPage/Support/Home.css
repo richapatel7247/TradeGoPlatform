@@ -1,0 +1,17 @@
+.hero {
+    color: white;
+    background-color: rgb(56, 126, 209);
+    /* background-color: #1677de; */
+}
+
+.hero a {
+  color: white;
+  text-decoration: underline;
+}
+.hero input {
+    width: 100%;
+    border: none;
+    border-radius: 0.3rem ;
+    padding: 15px;
+    padding-left: 20px;
+}

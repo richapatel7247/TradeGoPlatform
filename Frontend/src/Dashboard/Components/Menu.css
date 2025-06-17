@@ -1,0 +1,10 @@
+.logo {
+    color: #1976d2 !important;
+    display: flex;
+    align-items: center;
+    
+}
+
+.navb {
+    display: flex;
+}

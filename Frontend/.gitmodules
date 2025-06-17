@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/richapatel7247/TradeGo.git
+[submodule "tradeGo"]
+	path = tradeGo
+	url = https://github.com/richapatel7247/TradeGo.git

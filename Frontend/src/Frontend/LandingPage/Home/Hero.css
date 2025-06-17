@@ -1,0 +1,7 @@
+Button {
+  box-shadow: 1px 1px 10px  #686a6c !important;
+}
+
+Button:hover {
+  background-color: #0d5dac !important;
+}

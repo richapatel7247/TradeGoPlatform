@@ -8,3 +8,18 @@
 .prod:hover{
     box-shadow: 1px 7px 10px  rgb(222, 221, 221);
 }
+
+@media((min-width:50px) and (max-width:500px)) {
+
+    .statsContaint {
+        width: 100%;
+        padding: 0px !important;
+    }
+
+    .stateImg {
+        padding: 0% !important;
+        width: 100%;
+        text-align: center;
+    }
+
+}

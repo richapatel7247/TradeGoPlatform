@@ -31,3 +31,9 @@
 .logo {
     cursor: pointer;
 }
+
+@media((min-width:50px) and (max-width:500px))   {
+    .footer {
+        padding: 0% !important;
+    }
+}

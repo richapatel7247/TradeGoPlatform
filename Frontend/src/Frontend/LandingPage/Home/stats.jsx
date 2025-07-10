@@ -2,8 +2,8 @@ import "./Stats.css"
 export default function Stats() {
     return(
         <div className="container p-3">
-            <div className="row">
-            <div className="col-6 ps-5">
+            <div className="row stats">
+            <div className="col-6 ps-5 statsContaint">
             <h4 className="mb-4">Trust with confidence</h4>
 
             <div className="prod">
@@ -34,7 +34,7 @@ export default function Stats() {
         
             </div>
             
-            <div className="col-6 ps-5">
+            <div className="col-6 ps-5 stateImg">
                 <img src="/media/ecosystem.png" alt="" style={{width:"80%"}} />
                 <div> <a href="" className="mx-2" style={{textDecoration:"none"}}>Explore our products <i class="fa-solid fa-arrow-right"></i></a>
                 <a href="" className="ms-2" style={{textDecoration:"none"}}>Try kite demo <i class="fa-solid fa-arrow-right"></i></a></div>

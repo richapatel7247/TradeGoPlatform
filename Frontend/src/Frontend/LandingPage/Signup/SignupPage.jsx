@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import "./Signup.css";
 
-function SignupPage() {
+function SignupPage(updateInfo) {
     let [formData, setFormData] = useState({
         username : "",
         password : "",
@@ -29,15 +29,17 @@ function SignupPage() {
         <div className="container col-4 mt-3">
             <h4 className=" text-center">Sing in to TradeGo</h4>
             <div className="p-4 sup-box mt-4">
+
                 <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username</label>
                 <input type="text" 
                 id="username" 
+                required
+                label="username"
                 class="form-control" 
                 aria-describedby="passwordHelpBlock"
-                placeholder="enter username"
-                value={formData.username}
                 name="username"
+                placeholder="richa_030"
                 onChange={handleInputChange}/>
                 <br />
 
@@ -61,7 +63,7 @@ function SignupPage() {
                   name="password"
                   onChange={handleInputChange}/>
                   <br />
-                  <Link to="/dash" className="button"> <Button type="submit" variant="contained" disableElevation>Submit</Button></Link>
+                  <Button type="submit" variant="contained" disableElevation>Submit</Button>
                 </form></div>
         </div>
      );

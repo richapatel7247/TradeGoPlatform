@@ -2,3 +2,19 @@
      background-color: rgb(246, 247, 248);
      box-shadow: 1px 7px 10px rgb(205, 204, 204);
 }
+
+
+@media((min-width:50px) and (max-width:500px)) {
+     .pricCont {
+      width: 100%;
+      padding: 0% !important;
+     }
+
+     .boxes {
+          padding: 0% !important;
+     }
+
+     .container {
+          padding: 0% !important;
+     }
+}

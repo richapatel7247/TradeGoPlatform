@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import LeaderboardRoundedIcon from '@mui/icons-material/LeaderboardRounded';
 function Navbar() {
     return(
-    <nav class="navbar navbar-expand-md  bg-body-white sticky-top">
+    <nav class="navbar navbar-expand-md bg-body-white sticky-top">
        <div className="container">
-         <div>
+      
             <ul className="navbar-nav">
             <li> <Link class="navbar-brand logo" to={"/"}><LeaderboardRoundedIcon  fontSize="large"></LeaderboardRoundedIcon><h5>Trade Go</h5></Link></li>
             </ul>
-         </div>
+     
 
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
+         <div class="navbar-toggler navIcon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=" fa-solid fa-bars"></span>
+         </div>
 
          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">

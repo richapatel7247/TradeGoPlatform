@@ -30,7 +30,7 @@ function Menu() {
                   <div className="col-4"><Link class="navbar-brand logo" to={"/"}><LeaderboardRoundedIcon  fontSize="large"></LeaderboardRoundedIcon><h5>Trade Go</h5></Link></div>
 
                    <div  className="col-6 navbtn buttons"> 
-                      <Link to="/" onClick={() => handleMenuClick(0)}> <p className={selectMenu===0 ? acticeMenuClass : menuClass}> Dashboard </p> </Link>
+                      <Link to="/dash/" onClick={() => handleMenuClick(0)}> <p className={selectMenu===0 ? acticeMenuClass : menuClass}> Dashboard </p> </Link>
                       <Link to="/dash/orders" onClick={() => handleMenuClick(1)}> <p className={selectMenu===1?acticeMenuClass : menuClass}> Orders </p> </Link>
                      <Link to="/dash/holdings" onClick={() => handleMenuClick(2)}> <p className={selectMenu===2?acticeMenuClass : menuClass}> Holdings </p> </Link>
                      <Link to="/dash/positions" onClick={() => handleMenuClick(3)}> <p className={selectMenu===3?acticeMenuClass : menuClass}> Positions</p> </Link>

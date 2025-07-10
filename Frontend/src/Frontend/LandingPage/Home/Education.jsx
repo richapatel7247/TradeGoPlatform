@@ -1,11 +1,12 @@
+import "./Education.css";
 function Education() {
     return ( 
        <div className="container p-3">
         <div className="row">
-            <div className="col-6 p-5">
+            <div className="col-6 p-5 eduCont">
                 <img src="/media/education.svg" alt="" style={{width:"80%"}} />
             </div>
-            <div className="col-6 p-5">
+            <div className="col-6 p-5 eduCont">
                 <h4 className="mb-5">Free and open market education</h4>
                 <div className="mb-2 prod">
                 <p className="mb-2">Varsity, the largest online stock market education book in the world

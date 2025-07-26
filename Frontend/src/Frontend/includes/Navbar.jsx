@@ -22,19 +22,19 @@ function Navbar() {
 
          <div className=" navbar-nav ms-auto">
             <ul class="navbtn navbar-nav">
-             <li class="nav-item">
+             <li class="nav-item me-4">
                <Link class="nav-link" to={"/signup"}>Signup</Link>
              </li>
-             <li class="nav-item">
+             <li class="nav-item  me-4">
                 <Link class="nav-link" to={"/about"}>About</Link>
              </li>
-             <li class="nav-item">
+             <li class="nav-item  me-4">
                 <Link class="nav-link" to={"/product"}>Products</Link>
              </li>
-             <li class="nav-item">
+             <li class="nav-item  me-4">
                 <Link class="nav-link" to={"/pricing"}>Pricing</Link>
              </li>
-             <li class="nav-item">
+             <li class="nav-item  me-4">
                 <Link class="nav-link" to={"/support"}>Support</Link>
              </li>
             </ul>

@@ -1,11 +1,10 @@
-// import { positions } from "../Data/data.js";
 import axois from "axios";
 import { useState, useEffect} from "react";
 function Positions() {
     let [allPositions, setAllPositions] = useState([]);
 
     useEffect(()=> {
-        axois.get("http://localhost:3002/allPositions").then((res) => {
+        axois.get("http://localhost:8000/allPositions").then((res) => {
             setAllPositions(res.data);
         })
     }, []);

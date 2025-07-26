@@ -1,13 +1,13 @@
 import "./Home.css"
 import axios from "axios";
 import { useState, useEffect } from "react";
-// import {holdings} from "../Data/data.js";
+
 function Holdings() {
 
     let [allHoldings, setAllHoldings] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3002/allHoldings").then((res) => {
+        axios.get("http://localhost:8000/allHoldings").then((res) => {
             setAllHoldings(res.data);
         });
      }, []);

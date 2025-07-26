@@ -1,64 +1,32 @@
-require("dotenv").config();
-
 const express  = require("express");
 const app = express();
 
 const mongoose = require("mongoose");
-const passport = require("passport");
-const LocalStrategy = require("passport-local");
-const session = require("express-session");
+const cors = require("cors");
+const userRoutes = require('./userRoutes.js');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const {holdingsModel} = require("./Models/HoldingsModel");
 const {positionsModel} = require("./Models/PositionsModel");
-const user = require("./Models/UserModel");
 
-const PORT  = process.env.PORT || 3002;
-
+const PORT  = 8000;
+// process.env.PORT || 
 const dbUrl = process.env.MONGO_URL;
 
-const bodyParser = require("body-parser");
-const cors = require("cors");
 
-app.use(bodyParser.json());
-app.use(cors());
 
-const sessionOptions = {
-    secret : "tradego",
-    resave : false,
-    saveUninitialized : true,
-    cookie : {
-        expire : Date.now() + 7 * 24 * 60 * 60 * 1000,
-        maxAge : 7 * 24 * 60 * 60 * 1000,
-        httpOnly : true,
-    }
-};
+app.use(express.json());
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 
-app.use(session(sessionOptions));
+app.post('/signup', userRoutes);
 
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new LocalStrategy(user.authenticate()));
+mongoose.connect(dbUrl)
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch(err => console.error(err));
 
-passport.serializeUser(user.serializeUser());
-passport.deserializeUser(user.deserializeUser());
-
-app.get("/newusr", async(req, res) => {
-    let userfake = new user({
-        username : "fakeuser",
-        email : "fakeuser.com"
-    });
-    let newfakeUser = await user.register(userfake, "fakeuserpass");
-    res.send(newfakeUser);
-})
-
-// app.get("/demouser1", async(req, res) => {
-//     let fakeuser = new user({
-//         email : "tradego1@gmail.com",
-//         username : "tradeuser1",
-//     });
-//     let newUser = await user.register(fakeuser, "tradego1");
-//     res.send(newUser);
-// })
 
 app.get("/allHoldings", async(req, res) => {
    let allHoldings = await holdingsModel.find({});
@@ -238,7 +206,5 @@ app.get("/allPositions", async(req, res) => {
 // });
 
 app.listen(PORT, () => {
-    console.log("app is listening");
-    mongoose.connect(dbUrl);
-    console.log("db connected");
+    console.log(`app is listening ${PORT}`);
 });

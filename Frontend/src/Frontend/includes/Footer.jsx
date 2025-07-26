@@ -19,9 +19,9 @@ export default function Footer() {
         <div className='col'>
         <h6>Company</h6>
         <div className='links'>
-        <a href="">About</a> <br />
-        <a href="">Products</a> <br />
-        <a href="">Pricing</a><br />
+        <a href="/about">About</a> <br />
+        <a href="/product">Products</a> <br />
+        <a href="/pricing">Pricing</a><br />
         <a href="">Referral programe</a> <br />
         <a href="">Careers</a> <br />
         <a href="">TradeGo.tech</a> <br />
@@ -35,7 +35,7 @@ export default function Footer() {
         <div className='links'>
             <a href="">Contact</a>
             <br />
-            <a href="">Support portal</a>
+            <a href="/support">Support portal</a>
             <br />
             <a href="">Z-Connect blog</a>
             <br />
@@ -48,7 +48,7 @@ export default function Footer() {
         <div className='col'>
         <h6>Account</h6>
         <div className='links'>
-            <a href="">Open an account</a>
+            <a href="/signup">Open an account</a>
             <br />
             <a href="">Fund transfer</a>
             <br />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {useDispatch, useSelector } from 'react-redux';
 import { signup } from "../../../features/user.js/UserSlice";
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ function SignupPage() {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user, error } = useSelector((state) => state.user); 
+  const { user} = useSelector((state) => state.user); 
   console.log('user:', user);
  
     let [formData, setFormData] = useState({

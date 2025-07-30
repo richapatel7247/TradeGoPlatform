@@ -2,9 +2,10 @@ import { Button } from "@mui/material";
 import { Link } from 'react-router-dom';
 import "./Hero.css";
 import '@fontsource/roboto/500.css';
+
 export default function Hero() {
     return(
-        <div className="container p-3 text-center">
+        <div className="container p-3 pt-5 text-center">
             <div className="row">
                 <img src="media/homeHero.png" alt="hero image" className="mb-5 mx-auto rounded d-block" style={{height:"70%", width:"70%"}}/>
             </div>

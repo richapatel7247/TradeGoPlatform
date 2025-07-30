@@ -1,3 +1,4 @@
+import mixpanel from "../../../utils/mixpanel";
 import { useState } from "react";
 import {useDispatch, useSelector } from 'react-redux';
 import { signup } from "../../../features/user.js/UserSlice";
@@ -30,6 +31,14 @@ function SignupPage() {
   
         dispatch(signup(formData));
         navigate('/dashboard');
+
+        mixpanel.track("Signup", {
+          email: formData.email,
+          time: new Date().toISOString(),
+          source: "signup-page", // optional, can use useLocation to track source
+    });
+
+    console.log("Signup event sent to Mixpanel");
 
         setFormData({
             username : "",

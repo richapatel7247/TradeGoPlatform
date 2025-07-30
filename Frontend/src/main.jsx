@@ -7,8 +7,12 @@ import Dashboardrender from './Dashboard/Dashboardrender';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import PrivateRoute from './Private';
 
+
+
+
 createRoot(document.getElementById('root')).render(
- 
+
+
  <BrowserRouter>
   <Provider store={store}>
  <Routes>
